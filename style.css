@@ -45,6 +45,10 @@
     color: #4832ed;
     margin-bottom: 10px;
   }
+  a:hover{
+    background-color: #918fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.284);
+  }
   .dat{
     display: flex;
     margin-top: 0;
