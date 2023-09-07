@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+  *{
+    font-family: 'Preahvihear';
+  }
+  body{
+    background-color:#c8c7ff;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 350px;
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+}
+  .hero{
+    margin-top: 20px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;  
+}
+  img[data-testid="slackDisplayImage"]{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  h2[data-testid="slackUserName"]{
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  p[data-testid="myTrack"]{
+    margin: 0;
+  }
+  a[data-testid="githubURL"]{
+    /* text-decoration: none; */
+    background-color: #c8c7ff;
+    padding: 4px 15px;
+    border-radius: 5px;
+    color: #4832ed;
+    margin-bottom: 10px;
+  }
+  .dat{
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dat>p{
+    margin: 5px;
+  }
+  p[data-testid="currentDayOfTheWeek"]{
+    margin-right: 10px;
+  }
