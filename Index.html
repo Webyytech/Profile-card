@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Stage 1- Profile Card</title>
 </head>
+
 <body>
     <section class="container">
-<div class="hero">
-    <img src="m8.jpeg" alt="Webyytech" data-testid="slackDisplayImage">
-    <h2 data-testid="slackUserName">Adebayo Abdulghafar</h2>
-    <p data-testid="myTrack">< /> Track: Frontend</p>
-    <div class="dat">
+        <img src="m8.jpeg" alt="Webyytech" data-testid="slackDisplayImage">
+        <h2 data-testid="slackUserName">Webyytech</h2>
+        <p data-testid="myTrack">Track: Frontend</p>
         <p data-testid="currentDayOfTheWeek"></p>
         <p data-testid="currentUTCTime"></p>
-    </div>
-    <a href="https://github.com/Webyytech/Profile-card" data-testid="githubURL">Repository</a></button>
-    
-</div>
+        <a href="https://github.com/Webyytech/Profile-card" data-testid="githubURL">Github Repository</a></button>
+
     </section>
-    
+
 
     <script>
-   function updateCurrentTimeAndDay() {
+        function updateCurrentTimeAndDay() {
             const currentTimeMillis = Date.now();
             const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const currentDay = daysOfWeek[new Date().getDay()];
@@ -36,4 +34,5 @@
         updateCurrentTimeAndDay();
     </script>
 </body>
+
 </html>
