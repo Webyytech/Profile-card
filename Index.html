@@ -15,7 +15,7 @@
         <p data-testid="myTrack">Track: Frontend</p>
         <div class="dat">
             <p data-testid="currentDayOfTheWeek"></p>
-            <p data-testid="currentUTCTime"></p>
+            <div data-testid="CurrentUTCTime"></div>
         </div>
         <a href="https://github.com/Webyytech/Profile-card" data-testid="githubURL">Github Repository</a></button>
 
@@ -23,19 +23,20 @@
 
 
     <script>
-   function updateUTCTime() {
-            const currentTime = new Date().toUTCString().split(' ')[4];
-            document.querySelector('[data-testid="currentUTCTime"]').textContent = currentTime;
+        function updateCurrentTime() {
+            const currentTime = new Date();
+            const timestamp = currentTime.getTime();
+            const Time = currentTime.toLocaleTimeString();
+            const utcTimeElement = document.querySelector('[data-testid="CurrentUTCTime"]');
+            utcTimeElement.textContent = `The time is: ${Time} Millis: ${timestamp}`;
         }
-
-        function updateCurrentDay() {
-            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is ${daysOfWeek[new Date().getDay()]}`;
-        }
-
-        setInterval(updateUTCTime, 1000);
-        updateUTCTime();
-        updateCurrentDay();
+        setInterval(updateCurrentTime, 1000);
+        updateCurrentTime();
+        const currentDate = new Date();
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDay = daysOfWeek[currentDate.getDay()];
+        const element = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+        element.textContent = `Today is ${currentDay}`;
     </script>
 </body>
 
