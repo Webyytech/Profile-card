@@ -13,25 +13,29 @@
         <img src="m8.jpeg" alt="Webyytech" data-testid="slackDisplayImage">
         <h2 data-testid="slackUserName">Webyytech</h2>
         <p data-testid="myTrack">Track: Frontend</p>
-        <p data-testid="currentDayOfTheWeek"></p>
-        <p data-testid="currentUTCTime"></p>
+        <div class="dat">
+            <p data-testid="currentDayOfTheWeek"></p>
+            <p data-testid="currentUTCTime"></p>
+        </div>
         <a href="https://github.com/Webyytech/Profile-card" data-testid="githubURL">Github Repository</a></button>
 
     </section>
 
 
     <script>
-        function updateCurrentTimeAndDay() {
-            const currentTimeMillis = Date.now();
-            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            const currentDay = daysOfWeek[new Date().getDay()];
-
-            document.querySelector('[data-testid="currentUTCTime"]').textContent = `Time in Milliseconds: ${currentTimeMillis}`;
-            document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is ${currentDay}`;
+   function updateUTCTime() {
+            const currentTime = new Date().toUTCString().split(' ')[4];
+            document.querySelector('[data-testid="currentUTCTime"]').textContent = currentTime;
         }
 
-        setInterval(updateCurrentTimeAndDay, 1000);
-        updateCurrentTimeAndDay();
+        function updateCurrentDay() {
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is ${daysOfWeek[new Date().getDay()]}`;
+        }
+
+        setInterval(updateUTCTime, 1000);
+        updateUTCTime();
+        updateCurrentDay();
     </script>
 </body>
 

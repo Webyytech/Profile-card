@@ -30,6 +30,13 @@
     display: flex;
     align-items: center;
   }
+  .dat{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    align-items: center;
+
+  }
   h2{
     font-size: 1.3em;
     margin-bottom: 0;
@@ -42,7 +49,6 @@
     margin: 0;
   }
   a[data-testid="githubURL"]{
-    /* text-decoration: none; */
     background-color: #c8c7ff;
     padding: 4px 15px;
     border-radius: 5px;
@@ -55,4 +61,8 @@
   }
   p[data-testid="currentDayOfTheWeek"]{
    margin: 0;
+  }
+  p[data-testid="currentUTCTime"]{
+    margin: 0;
+    margin-left: 4px;
   }
